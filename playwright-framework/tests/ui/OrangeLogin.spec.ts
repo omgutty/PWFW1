@@ -7,8 +7,8 @@ import loginData from '../../test-data/loginData.json';
 
 
 test('Orange Login',async ({page,orangeloginpage})=>{
-    await page.goto('/');
-    await page.waitForTimeout(5000);
+    await page.goto('/',{timeout:100000});
+    
     await orangeloginpage.login(
         loginData.orangecredential.username,
         loginData.orangecredential.password)

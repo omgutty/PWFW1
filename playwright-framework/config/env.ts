@@ -2,6 +2,7 @@ type EnvType = 'OrangeBaseURL' | 'saucedemo';
 
 const ENV_CONFIG = {
   OrangeBaseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
+  googleBaseURL:'https://www.google.com/',
   saucedemo: 'https://www.saucedemo.com/'
 };
 

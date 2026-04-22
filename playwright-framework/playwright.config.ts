@@ -17,6 +17,7 @@ import { getBaseUrl } from './config/env';
  */
 export default defineConfig({
   testDir: './tests',
+  timeout: 60000, // 60 seconds for each test, by default it is 30 seconds
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -37,6 +38,7 @@ export default defineConfig({
   use: {
 
     baseURL: getBaseUrl(),
+    
     //instead of hard coding the base url here, we are using env.ts. 
     //here we are keeping the url and passing with function
    //baseURL: 'https://www.saucedemo.com/'
