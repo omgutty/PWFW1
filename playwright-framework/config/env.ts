@@ -1,12 +1,12 @@
-type EnvType = 'QA' | 'saucedemo';
+type EnvType = 'OrangeBaseURL' | 'saucedemo';
 
 const ENV_CONFIG = {
-  QA: 'https://qa.example.com',
+  OrangeBaseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
   saucedemo: 'https://www.saucedemo.com/'
 };
 
 export function getBaseUrl(): string {
-  const env = (process.env.TEST_ENV as EnvType) || 'saucedemo';
+  const env = (process.env.TEST_ENV as EnvType) || 'OrangeBaseURL';
   return ENV_CONFIG[env];
 }
 
