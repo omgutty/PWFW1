@@ -1,0 +1,40 @@
+playwright-framework/
+│
+├── tests/                  # Test specs
+│   ├── ui/
+│   ├── api/
+│
+├── pages/                  # Page Object Model
+│   ├── LoginPage.ts
+│   ├── DashboardPage.ts
+│
+├── fixtures/               # Custom fixtures
+│   ├── baseTest.ts
+│
+├── test-data/              # Static & dynamic test data
+│   ├── loginData.json
+│
+├── utils/                  # Reusable utilities
+│   ├── logger.ts
+│   ├── helper.ts
+│
+├── locators/ (optional)    # If you separate locators
+│
+├── config/                 # Env configs
+│   ├── env.ts
+│
+├── reports/                # Test reports
+├── screenshots/            # Failure screenshots
+├── videos/                 # Execution videos
+│
+├── playwright.config.ts    # Main config
+├── tsconfig.json
+├── package.json
+
+//to run the another environment test 
+//set TEST_ENV=QA && npx playwright test
+
+PENDING:
+Allure reporting integration
+Retry + flaky test handling strategy
+Data-driven framework (Excel/CSV integration like your previous code)
