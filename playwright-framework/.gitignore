@@ -11,6 +11,7 @@ node_modules/
 # Playwright
 /test-results/
 /playwright-report/
+/reports/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
@@ -32,3 +33,4 @@ Thumbs.db
 
 # Coverage
 coverage/
+
