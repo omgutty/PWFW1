@@ -9,12 +9,7 @@ type MyFixtures = {
   orangeloginpage:OrangeLoginPage;
 };
 
-// export const orane = base.extend<MyFixtures>({
-//   orangeloginpage: async ({ page }, use) => {
-//     const orangeloginPage = new OrangeLoginPage(page);
-//     await use(orangeloginPage);
-//   }
-// });
+
 
 
 export const test = base.extend<MyFixtures>({
@@ -30,3 +25,10 @@ export const test = base.extend<MyFixtures>({
 
 export {expect}
 //export const expect = test.expect;
+
+// export const orane = base.extend<MyFixtures>({
+//   orangeloginpage: async ({ page }, use) => {
+//     const orangeloginPage = new OrangeLoginPage(page);
+//     await use(orangeloginPage);
+//   }
+// });

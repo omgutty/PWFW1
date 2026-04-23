@@ -1,4 +1,4 @@
-import { test, expect } from '../../fixtures/baseTest';
+import { test, expect } from '../../fixtures/test-fixture';
 import loginData from '../../test-data/loginData.json';
 
 test('Sauce Demo Login test', async ({ page, loginPage }) => {
