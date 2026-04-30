@@ -9,12 +9,14 @@ export class BasePage{
     }
 
     //common Element action methods
-    async click(locator:Locator):Promise<void>{
-        await locator.click()
-    }
-    async fill(locator:Locator,value:string):Promise<void>{
-        await locator.fill(value);
-    }
+    async click(locator: Locator): Promise<void> {
+    await locator.waitFor({ state: 'visible' });
+    await locator.click();
+}
+    async fill(locator: Locator, value: string): Promise<void> {
+    await locator.waitFor({ state: 'visible' });
+    await locator.fill(value);
+}
     async type(locator:Locator,value:string){
         await locator.type(value);
     }

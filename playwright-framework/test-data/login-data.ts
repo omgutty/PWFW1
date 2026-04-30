@@ -9,5 +9,9 @@ export const logindata={
     orangelogind:{
         username:'Admin',
         password:'admin123'
+    },
+     Freelancevaliduser:{
+        email:'admin@email.com',
+        password:'admin@123'
     }
 }

@@ -3,15 +3,13 @@ import { test as base ,expect} from '@playwright/test';
 
 import { LoginPage } from '../pages/LoginPage';
 import {OrangeLoginPage} from '../pages/OrangeLoginPage'
+import { FreeLanceLoginpage } from '../pages/FreeLanceLoginpag';
 
 type MyFixtures = {
   loginPage: LoginPage;
   orangeloginpage:OrangeLoginPage;
+  freeLanceLoginPage: FreeLanceLoginpage;
 };
-
-
-
-
 
 export const test = base.extend<MyFixtures>({
   loginPage: async ({ page }, use) => {
@@ -21,6 +19,11 @@ export const test = base.extend<MyFixtures>({
   orangeloginpage: async ({ page }, use) => {
     const orangeloginPage = new OrangeLoginPage(page);
     await use(orangeloginPage);
+  },
+  freeLanceLoginPage: async({page},use)=>{
+    const freelanceloginpage= new FreeLanceLoginpage(page);
+    await use(freelanceloginpage);
+
   }
 });
 

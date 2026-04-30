@@ -6,18 +6,18 @@ import { test, expect } from '../../fixtures/test-fixture';
 import loginData from '../../test-data/loginData.json';
 
 
-// test('Orange Login',async ({page,orangeloginpage})=>{
-//     await page.goto('/',{timeout:100000});
-    
-//     await orangeloginpage.login(
-//         loginData.orangecredential.username,
-//         loginData.orangecredential.password)
-//     await expect(page).toHaveURL(/index/,{timeout:6000});
-
-// })
-
-test('verify linkedinlink navigation', async ({page,orangeloginpage})=>{
+test('Orange Login',async ({page,orangeloginpage})=>{
     await page.goto('/',{timeout:100000});
-    await orangeloginpage.clickonLinkedinFooterLink()
-    await page.waitForTimeout(5000); expect
+    
+    await orangeloginpage.login(
+        loginData.orangecredential.username,
+        loginData.orangecredential.password)
+    await expect(page).toHaveURL(/index/,{timeout:6000});
+
 })
+
+// test('verify linkedinlink navigation', async ({page,orangeloginpage})=>{
+//     await page.goto('/',{timeout:100000});
+//     await orangeloginpage.clickonLinkedinFooterLink()
+//     await page.waitForTimeout(5000); expect
+// })

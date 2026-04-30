@@ -1,13 +1,14 @@
-type EnvType = 'OrangeBaseURL' | 'saucedemo';
+type EnvType = 'OrangeBaseURL' | 'saucedemo'|'freelanceloginpageURL';
 
 const ENV_CONFIG = {
   OrangeBaseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
   googleBaseURL:'https://www.google.com/',
-  saucedemo: 'https://www.saucedemo.com/'
+  saucedemo: 'https://www.saucedemo.com/',
+  freelanceloginpageURL:'https://freelance-learn-automation.vercel.app/login/',
 };
 
 export function getBaseUrl(): string {
-  const env = (process.env.TEST_ENV as EnvType) || 'OrangeBaseURL';
+  const env = (process.env.TEST_ENV as EnvType) || 'freelanceloginpageURL';
   return ENV_CONFIG[env];
 }
 
