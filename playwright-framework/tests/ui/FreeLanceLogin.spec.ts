@@ -12,6 +12,8 @@ test('Freelancelongin with valid user',async ({page,freeLanceLoginPage})=>{
         loginData.Freelancevaliduser.email,
         loginData.Freelancevaliduser.password);
     await page.waitForTimeout(5000);
+    
+    //expect(await freeLanceLoginPage.isLoginUnsuccessful).toh
     //expect(await freeLanceLoginPage.isLoginSuccessful()).toBeTruthy();
     //Logger.error('Login failed'); add this in if condition, if expected to be failed. 
 })

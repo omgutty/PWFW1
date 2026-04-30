@@ -6,12 +6,14 @@ export class FreeLanceLoginpage extends BasePage{
     readonly EnterEmail:Locator; 
     readonly EnterPassword:Locator;
     readonly SigninButton:Locator;
+    readonly errormessage:Locator;
 
     constructor (page:Page){
         super(page);
         this.EnterEmail= page.locator('#email1');
         this.EnterPassword= page.locator('#password1');
         this.SigninButton= page.locator('.submit-btn');
+        this.errormessage= page.locator('.errorMessage');
 
         //this.EnterEmail= page.getByRole('textbox',{name:'email1'});
         //this.EnterPassword= page.getByRole('textbox',{name:'password1'});
@@ -24,6 +26,10 @@ export class FreeLanceLoginpage extends BasePage{
         await this.fill(this.EnterEmail,user)
         await this.fill(this.EnterPassword, pass);
         await this.click(this.SigninButton);   
+    }
+
+    async isLoginUnsuccessful():Promise<string|null>{
+        return await this.errormessage.textContent();
     }
     async isLoginSuccessful() {
     return this.page.url().includes('dashboard');
