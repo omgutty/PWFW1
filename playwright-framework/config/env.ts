@@ -4,7 +4,8 @@ const ENV_CONFIG = {
   OrangeBaseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
   googleBaseURL:'https://www.google.com/',
   saucedemo: 'https://www.saucedemo.com/',
-  freelanceloginpageURL:'https://freelance-learn-automation.vercel.app/login/',
+  freelanceloginpageURL: 'https://freelance-learn-automation.vercel.app'
+ //freelanceloginpageURL: 'https://www.google.com/'
 };
 
 export function getBaseUrl(): string {

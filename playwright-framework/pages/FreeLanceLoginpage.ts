@@ -7,6 +7,7 @@ export class FreeLanceLoginpage extends BasePage{
     readonly EnterPassword:Locator;
     readonly SigninButton:Locator;
     readonly errormessage:Locator;
+    readonly confirmationmessage:Locator;
 
     constructor (page:Page){
         super(page);
@@ -14,6 +15,7 @@ export class FreeLanceLoginpage extends BasePage{
         this.EnterPassword= page.locator('#password1');
         this.SigninButton= page.locator('.submit-btn');
         this.errormessage= page.locator('.errorMessage');
+        this.confirmationmessage= page.locator('.welcomeMessage');
 
         //this.EnterEmail= page.getByRole('textbox',{name:'email1'});
         //this.EnterPassword= page.getByRole('textbox',{name:'password1'});
@@ -33,6 +35,10 @@ export class FreeLanceLoginpage extends BasePage{
     }
     async isLoginSuccessful() {
     return this.page.url().includes('dashboard');
-}
+    }
+
+    async successfulllogin():Promise <string|null>{
+        return await this.confirmationmessage.textContent()
+    }
 }
 
